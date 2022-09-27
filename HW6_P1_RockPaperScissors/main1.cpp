@@ -60,7 +60,21 @@ int main()
     
     // HANDOUT (PART A): Determine the winner of the game.
 
-    if (userPick == 'R')
+   
+    
+    // HANDOUT (PART B): Inform the user who won.
+    
+    
+    
+    // HANDOUT (PART C): Randomly display celebratory messages if user won.
+
+    return 0;
+}
+
+char DetermineWinner()
+{
+  
+  if (userPick == 'R')
     {
       if (computerPick == 'R')
       
@@ -129,17 +143,7 @@ int main()
       else
         cout << "You Win!" << endl;     
     }
-    
-    
-    // HANDOUT (PART B): Inform the user who won.
-    
-    
-    
-    // HANDOUT (PART C): Randomly display celebratory messages if user won.
-
-
-
-    return 0;
+  return;
 }
 
 /////////////// User-Created Functions ////////////////////////////////////////
