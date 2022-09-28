@@ -49,6 +49,7 @@ int main()
         }
         else
             cout << "Invalid Selection. Try again. " << endl;
+     
     }
     
     // Repeat selection back to user.
@@ -67,74 +68,49 @@ int main()
 }
 
 void DetermineWinner(char uP, char cP)
-{
-  
+{  
   if (uP == 'R')
     {
-      if (cP == 'R')
-      
+      if (cP == 'R')      
         cout << "Tie. " << endl;
-
       else if ((cP == 'K')||(cP == 'P'))
-
         cout << "You lose. " << endl;
-
       else
         cout << "You Win! " << endl;     
     }
-
     if (uP == 'P')
     {
-      if (cP == 'P')
-      
+      if (cP == 'P')      
         cout << "Tie. " << endl;
-
       else if ((cP == 'S')||(cP == 'L'))
-
         cout << "You lose. " << endl;
-
       else
         cout << "You Win!" << endl;     
     }
-
     if (uP == 'S')
     {
-      if (cP == 'S')
-      
+      if (cP == 'S')      
         cout << "Tie. " << endl;
-
       else if ((cP == 'K')||(cP == 'R'))
-
         cout << "You lose. " << endl;
-
       else
         cout << "You Win!" << endl;     
     }
-
     if (uP == 'L')
     {
-      if (cP == 'L')
-      
+      if (cP == 'L')      
         cout << "Tie. " << endl;
-
       else if ((cP == 'S')||(cP == 'R'))
-
         cout << "You lose. " << endl;
-
       else
         cout << "You Win!" << endl;     
     }
-
     if (uP == 'K')
     {
-      if (cP == 'K')
-      
+      if (cP == 'K')      
         cout << "Tie. " << endl;
-
       else if ((cP == 'L')||(cP == 'P'))
-
         cout << "You lose. " << endl;
-
       else
         cout << "You Win!" << endl;     
     }
