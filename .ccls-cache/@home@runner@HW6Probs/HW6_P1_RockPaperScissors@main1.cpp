@@ -20,7 +20,7 @@ using namespace std;
 //////////////////// Prototype Functions /////////////////////////////////////
 void TranslatePick(int flag_who, char selection);
 char ComputerSelectRPSLK();
-
+void DetermineWinner(char uP, char cP);
 //////////////////// MAIN ////////////////////////////////////////////////////
 int main()
 {
@@ -28,7 +28,7 @@ int main()
     char userPick;                  // user's selection for game
     bool valid_pick = false;        // flag controlled while loop for obtaining user input
     char computerPick;              // randomly selected computer selection for game
-    char DetermineWinner;
+    
     
     
     // Display rules of the game.
@@ -59,28 +59,37 @@ int main()
     TranslatePick(1, computerPick); // Inform user of computer selection
     
     // HANDOUT (PART A): Determine the winner of the game.
-
-   
-    
-    // HANDOUT (PART B): Inform the user who won.
-    
-    
-    
+  DetermineWinner(userPick, computerPick);
+    // HANDOUT (PART B): Inform the user who won.    
     // HANDOUT (PART C): Randomly display celebratory messages if user won.
 
     return 0;
 }
 
-char DetermineWinner()
+void DetermineWinner(char uP, char cP)
 {
   
-  if (userPick == 'R')
+  if (uP == 'R')
     {
-      if (computerPick == 'R')
+      if (cP == 'R')
       
         cout << "Tie. " << endl;
 
-      else if ((computerPick == 'K')||(computerPick == 'P'))
+      else if ((cP == 'K')||(cP == 'P'))
+
+        cout << "You lose. " << endl;
+
+      else
+        cout << "You Win! " << endl;     
+    }
+
+    if (uP == 'P')
+    {
+      if (cP == 'P')
+      
+        cout << "Tie. " << endl;
+
+      else if ((cP == 'S')||(cP == 'L'))
 
         cout << "You lose. " << endl;
 
@@ -88,13 +97,13 @@ char DetermineWinner()
         cout << "You Win!" << endl;     
     }
 
-    if (userPick == 'P')
+    if (uP == 'S')
     {
-      if (computerPick == 'P')
+      if (cP == 'S')
       
         cout << "Tie. " << endl;
 
-      else if ((computerPick == 'S')||(computerPick == 'L'))
+      else if ((cP == 'K')||(cP == 'R'))
 
         cout << "You lose. " << endl;
 
@@ -102,13 +111,13 @@ char DetermineWinner()
         cout << "You Win!" << endl;     
     }
 
-    if (userPick == 'S')
+    if (uP == 'L')
     {
-      if (computerPick == 'S')
+      if (cP == 'L')
       
         cout << "Tie. " << endl;
 
-      else if ((computerPick == 'K')||(computerPick == 'R'))
+      else if ((cP == 'S')||(cP == 'R'))
 
         cout << "You lose. " << endl;
 
@@ -116,27 +125,13 @@ char DetermineWinner()
         cout << "You Win!" << endl;     
     }
 
-    if (userPick == 'L')
+    if (uP == 'K')
     {
-      if (computerPick == 'L')
+      if (cP == 'K')
       
         cout << "Tie. " << endl;
 
-      else if ((computerPick == 'S')||(computerPick == 'R'))
-
-        cout << "You lose. " << endl;
-
-      else
-        cout << "You Win!" << endl;     
-    }
-
-    if (userPick == 'K')
-    {
-      if (computerPick == 'K')
-      
-        cout << "Tie. " << endl;
-
-      else if ((computerPick == 'L')||(computerPick == 'P'))
+      else if ((cP == 'L')||(cP == 'P'))
 
         cout << "You lose. " << endl;
 
