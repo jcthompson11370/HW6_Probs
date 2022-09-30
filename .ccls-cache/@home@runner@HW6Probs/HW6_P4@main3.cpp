@@ -9,7 +9,7 @@
 using namespace std;
 
 int day;
-int month;
+string month ="";
 int Date_Month();
 
 int main()
@@ -18,7 +18,7 @@ int main()
 
   switch(Date_Month())
     {
-      case (21/ 3) > (20/ 4):
+      case 1:
 
         cout << "Aries" << endl;
         break;
@@ -101,14 +101,8 @@ int Date_Month()
   }
   else
   {
-    cout << day <<" / "<< month << endl;
+    cout << day / month << endl; 
   }
-
-  
-
-
-
-
   
   return 0;
   

@@ -21,6 +21,7 @@ using namespace std;
 void TranslatePick(int flag_who, char selection);
 char ComputerSelectRPSLK();
 void DetermineWinner(char uP, char cP);
+void GiveFeedback(char uP, char cP);
 //////////////////// MAIN ////////////////////////////////////////////////////
 int main()
 {
@@ -63,8 +64,8 @@ int main()
   DetermineWinner(userPick, computerPick);
     // HANDOUT (PART B): Inform the user who won.    
     // HANDOUT (PART C): Randomly display celebratory messages if user won.
-
-    return 0;
+  GiveFeedback(userPick, computerPick);
+  return 0;
 }
 
 void DetermineWinner(char uP, char cP)
@@ -191,4 +192,108 @@ char ComputerSelectRPSLK()
     
     return randPickChar;
 }
-
+void GiveFeedback(char uP, char cP)
+{
+int MessagePick;
+string RandMessage;
+srand(time(NULL));
+if (uP == 'R')
+    {
+      if (cP == 'R')      
+        cout << "" << endl;
+      else if ((cP == 'K')||(cP == 'P'))
+        cout << "" << endl;
+      else{
+        MessagePick = rand() % 2;
+        switch (MessagePick){
+        case 0:
+        RandMessage = "Good Job!!";
+        cout << RandMessage << endl;
+        break;
+        case 1:
+        RandMessage = "You beat the computer!";
+        cout << RandMessage << endl;
+        break;}
+       }
+      }             
+    if (uP == 'P')
+    {
+      if (cP == 'P')      
+        cout << "" << endl;
+      else if ((cP == 'S')||(cP == 'L'))
+        cout << "You lose. " << endl;
+      else{
+        MessagePick = rand() % 2;
+        switch (MessagePick){
+        case 0:
+        RandMessage = "Have a soda pop";
+        cout << RandMessage << endl;
+        break;
+        case 1:
+        RandMessage = "Computer was no match...";
+        cout << RandMessage << endl;
+        break;}
+      }
+             
+    }
+    if (uP == 'S')
+    {
+      if (cP == 'S')      
+        cout << "" << endl;
+      else if ((cP == 'K')||(cP == 'R'))
+        cout << "" << endl;
+      else{
+        MessagePick = rand() % 2;
+        switch (MessagePick){
+        case 0:
+        RandMessage = "Go get a lottery ticket!";
+        cout << RandMessage << endl;
+        break;
+        case 1:
+        RandMessage = "You're a skilled individual!";
+        cout << RandMessage << endl;
+        break;}
+      }
+          
+    }
+    if (uP == 'L')
+    {
+      if (cP == 'L')      
+        cout << "" << endl;
+      else if ((cP == 'S')||(cP == 'R'))
+        cout << "" << endl;
+      else{
+        MessagePick = rand() % 2;
+        switch (MessagePick){
+        case 0:
+        RandMessage = "*computer* you beat me now, but I'LL BE BACK...";
+        cout << RandMessage << endl;
+        break;
+        case 1:
+        RandMessage = "Awesome!";
+        cout << RandMessage << endl;
+        break; }
+        }
+    }
+    if (uP == 'K')
+    {
+      if (cP == 'K')      
+        cout << "" << endl;
+      else if ((cP == 'L')||(cP == 'P'))
+        cout << "" << endl;
+      else{
+        MessagePick = rand() % 2;
+        switch (MessagePick){
+        case 0:
+        RandMessage = "Fantastic.";
+        cout << RandMessage << endl;
+        break;
+        case 1:
+        RandMessage = "You're too good.";
+        cout << RandMessage << endl;
+        break;
+      }
+             
+    }
+}
+}
