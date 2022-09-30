@@ -16,5 +16,8 @@ int main()
 double power_Gen(double H, double Q)
 {
   const double g = 9.81; // gravity
-  
+
+  double water_Density = 1000;
+
+  return water_Density * Q * H * g; 
 }
