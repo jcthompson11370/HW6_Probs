@@ -27,6 +27,6 @@ double power_Gen(double H, double Q)
 
   return water_Density * Q * H * g; 
 }
-// test case #1: 2.7468e+06 Watts
+// test case #1: 2.7468e^06 Watts
 
-// test case #2: 5.886e+06 Watts
+// test case #2: 5.886e^06 Watts
